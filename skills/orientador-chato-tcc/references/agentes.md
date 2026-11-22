@@ -9,7 +9,8 @@ Use agentes novos, de uso geral, disparados em paralelo. Não use fork.
 
 ## Agente 1: revisor de texto
 
-Recebe: o texto final com parágrafos numerados ([1], [2], ...), área, nível e norma.
+Recebe: o rascunho auditado com parágrafos numerados ([1], [2], ...), área, nível e
+norma.
 Não recebe as anotações de pesquisa nem a tabela de verificação.
 
 ```
@@ -45,7 +46,7 @@ Procure:
    - "serve como" / "atua como" / "se configura como" no lugar de "é";
    - autoridade vaga ("estudos mostram", "diversos autores" sem citação);
    - anúncios ("É importante ressaltar que", "Vale destacar que");
-   - mesmo conectivo repetido na mesma página;
+   - mesmo conectivo repetido em menos de ~400 palavras;
    - negrito decorativo, listas no corpo do texto, travessão como pausa dramática;
    - sobras de chatbot ("Claro!", "Espero que ajude").
    Conectivos acadêmicos e voz passiva não são erro por si; aponte só a repetição
@@ -70,7 +71,8 @@ TEXTO:
 
 ## Agente 2: verificador de fontes
 
-Recebe: o texto final, a lista de referências e a tabela de verificação.
+Recebe: o rascunho, a lista de referências, a tabela de verificação e o caminho local
+dos PDFs enviados pelo usuário (ou "nenhum").
 
 ```
 Você é o verificador de fontes de um trabalho acadêmico (norma {NORMA}). Sua tarefa é
@@ -82,25 +84,33 @@ Para cada citação no texto:
 
 1. Abra a fonte na página oficial (periódico, editora, repositório) ou pelo DOI em
    doi.org. Confira autores, título, ano, periódico, volume, número, páginas e DOI.
-2. Verifique se a fonte foi retratada (página do periódico e Retraction Watch Database).
-3. Localize no texto completo o trecho que sustenta a afirmação. Confira se a afirmação
-   diz o mesmo que a fonte, sem exagero: correlação apresentada como causa, resultado de
-   amostra generalizado, hipótese ou limitação do autor apresentada como conclusão,
-   ideia de outro autor atribuída a esta fonte.
-4. Em citação direta, compare palavra por palavra e confira a página.
-5. Se não conseguir abrir o texto completo, diga isso. Não deduza o conteúdo pelo título
-   ou pelo resumo.
+2. Verifique se a fonte foi retratada (página do periódico e registro do DOI no
+   Crossref, que inclui os dados do Retraction Watch).
+3. Localize no texto completo o trecho que sustenta a afirmação. Se a fonte estiver na
+   lista de PDFs locais, leia o arquivo. Confira se a afirmação diz o mesmo que a fonte,
+   sem exagero: correlação apresentada como causa, resultado de amostra generalizado,
+   hipótese ou limitação do autor apresentada como conclusão, ideia de outro autor
+   atribuída a esta fonte.
+4. Em citação direta, compare palavra por palavra e confira a página (ou seção, em
+   documento sem paginação).
+5. Se não conseguir abrir o texto completo, mas o resumo estiver acessível: confirme a
+   afirmação só se ela estiver no resumo, sem ir além dele. Não deduza o conteúdo pelo
+   título. Não contorne CAPTCHA, login ou paywall.
 
 Confira também: toda citação no texto tem entrada nas referências e toda referência é
 citada no texto; ano e grafia dos autores coincidem entre citação e referência.
 
 Para cada citação, informe:
 - citação e parágrafo onde aparece;
-- resultado: CONFIRMADA | DIVERGENTE | METADADOS ERRADOS | RETRATADA | NÃO ACESSÍVEL;
+- resultado: CONFIRMADA | CONFIRMADA PELO RESUMO | DIVERGENTE | METADADOS ERRADOS |
+  RETRATADA | NÃO ACESSÍVEL;
 - evidência: trecho curto da fonte + página, ou o motivo de não ter conseguido;
-- se DIVERGENTE: o que a fonte diz de fato.
+- se DIVERGENTE: o que a fonte diz de fato, ou "trecho não localizado".
 
-Nunca invente trecho, página ou DOI. Se não tiver certeza, marque NÃO ACESSÍVEL.
+Use NÃO ACESSÍVEL quando não conseguiu abrir o texto completo e a afirmação não está no
+resumo (ou não há resumo). Se leu o texto completo e não achou trecho que sustente a
+afirmação, o resultado é DIVERGENTE.
+Nunca invente trecho, página ou DOI.
 
 TEXTO:
 {TEXTO}
@@ -110,6 +120,9 @@ REFERÊNCIAS:
 
 TABELA DE VERIFICAÇÃO:
 {TABELA}
+
+PDFS LOCAIS:
+{ARQUIVOS}
 ```
 
 ---
@@ -117,4 +130,11 @@ TABELA DE VERIFICAÇÃO:
 ## Segunda rodada
 
 Na segunda rodada do Agente 2 (etapa 6), envie só os trechos alterados, as referências
-envolvidas e a tabela atualizada, com o mesmo modelo.
+envolvidas, a tabela atualizada e os PDFs locais, com o mesmo modelo, a um agente novo.
+Não há terceira rodada.
+
+## Modo de conferência
+
+Para "confira esta citação" ou as citações de um texto do usuário, use o modelo do
+Agente 2 com o texto do usuário em {TEXTO}. Se não houver tabela, escreva "nenhuma" em
+{TABELA}.

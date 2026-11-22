@@ -19,7 +19,9 @@ usar qualquer um deles de vez em quando. O problema é a repetição previsível
   frases seguidas com "Segundo".
 - Use o verbo de citação que corresponde ao que a fonte faz: "sugere", "estima",
   "demonstra", "argumenta" e "relata" não são intercambiáveis.
-- Prefira verbos simples: "é", "tem", "mostra", "mede", "conclui".
+- No texto próprio, prefira verbos simples: "é", "tem", "mede". O verbo de citação, ao
+  contrário, segue a regra acima: "mostra" e "demonstra" só quando a fonte de fato
+  demonstra.
 - Repita o termo técnico em vez de alternar sinônimos. Trocar "amostra" por "conjunto de
   participantes" e depois por "grupo analisado" confunde o leitor.
 - Ressalva só onde a evidência é limitada, uma vez, no ponto exato.
@@ -79,7 +81,7 @@ usar qualquer um deles de vez em quando. O problema é a repetição previsível
 "Além disso", "ademais", "portanto", "dessa forma", "nesse sentido" e "por sua vez" são
 legítimos na escrita acadêmica, mas:
 
-- o mesmo conectivo no máximo uma vez por página;
+- o mesmo conectivo no máximo uma vez a cada ~400 palavras (cerca de uma página);
 - nunca abrir dois parágrafos seguidos com conectivo;
 - muitas frases não precisam de conectivo nenhum.
 
@@ -91,7 +93,9 @@ Voz passiva também é aceitável quando a convenção da área pede.
 - listas com marcadores no corpo do texto (só quando o conteúdo for de fato uma lista);
 - títulos com Iniciais Maiúsculas ou no formato "Tema: Desafios e Perspectivas";
 - emojis;
-- travessão usado como pausa dramática (prefira vírgula, parênteses ou dois-pontos);
+- travessão usado como pausa dramática (prefira vírgula, parênteses ou dois-pontos); o
+  travessão exigido pela norma nas referências, como em "Dissertação (Mestrado) –
+  Instituição", fica;
 - aspas curvas e retas misturadas.
 
 ### Sobras de chat
@@ -138,7 +142,8 @@ Melhor:
 ## Checklist da autoauditoria
 
 - [ ] Procurei cada expressão das listas acima no rascunho.
-- [ ] Nenhum conectivo aparece mais de uma vez por página.
+- [ ] Nenhum conectivo se repete em menos de ~400 palavras (exceto se a amostra do
+  usuário o repete com essa frequência).
 - [ ] Os parágrafos têm tamanhos diferentes e nem todos fecham com síntese.
 - [ ] Toda afirmação forte tem citação ao lado.
 - [ ] Os autores aparecem em diálogo, não um por parágrafo.

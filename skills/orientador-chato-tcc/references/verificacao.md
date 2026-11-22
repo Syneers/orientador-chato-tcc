@@ -11,14 +11,16 @@ página oficial ou descarte.
 
 ## b) Acesso
 
-Abra o texto completo. Se só o resumo estiver acessível, a fonte só pode sustentar o que
-está escrito no resumo, e recebe o status VERIFICADA PELO RESUMO.
+Abra o texto completo. Antes de desistir, procure versão em acesso aberto (link de
+acesso aberto no OpenAlex ou Unpaywall, repositório institucional, PMC, SciELO). Se só o
+resumo estiver acessível, a fonte só pode sustentar o que está escrito no resumo, e
+recebe o status VERIFICADA PELO RESUMO.
 
 ## c) Conferência da afirmação
 
 Para cada afirmação que será atribuída à fonte, localize o trecho que a sustenta e anote:
 
-| afirmação | trecho curto da fonte | página ou seção |
+| afirmação | trecho curto da fonte | página ou seção (ou "resumo") |
 |---|---|---|
 
 Sem trecho localizado, a afirmação não entra no texto.
@@ -49,13 +51,16 @@ disciplinas, o que precisa ser testado".
 
 ## d) Citação direta
 
-Só com a página conferida no documento e o texto copiado palavra por palavra. Sem
-página, use paráfrase.
+Só com o texto copiado palavra por palavra do texto completo e a página conferida no
+documento. Em documento sem paginação (HTML, alguns PDFs on-line), indique seção ou
+parágrafo. Sem página nem localização conferida, use paráfrase. Não faça citação direta
+de fonte VERIFICADA PELO RESUMO.
 
 ## e) Citação de citação (apud)
 
 Só quando o original não estiver acessível. Indique os dois: o autor original e a fonte
-consultada.
+consultada. A verificação vale para a fonte consultada: confira que ela atribui a ideia
+ao autor original, e anote o trecho e a página dela.
 
 ## f) Status
 
@@ -73,5 +78,10 @@ uma afirmação, diga que não encontrou e deixe a afirmação de fora ou nas pe
 
 ## h) Paywall e bloqueio
 
-Se o site bloquear o acesso ou o artigo estiver atrás de paywall, informe o usuário e
-peça o PDF. Não deduza o conteúdo pelo título, pelo resumo ou por citações de terceiros.
+Se o site bloquear o acesso ou o artigo estiver atrás de paywall e não houver versão
+aberta, informe o usuário e peça o PDF. Enquanto isso, a fonte vale só pelo resumo
+(VERIFICADA PELO RESUMO), se ele estiver acessível; sem resumo, fica NÃO VERIFICADA.
+Não deduza o conteúdo pelo título nem por citações de terceiros. Não contorne CAPTCHA,
+login ou paywall. Continue com as demais fontes sem esperar o PDF.
+
+Quando o usuário enviar o PDF, anote o caminho do arquivo: ele vai para o Agente 2.

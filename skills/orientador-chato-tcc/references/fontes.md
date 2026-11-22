@@ -11,6 +11,12 @@
 Esses agregadores servem para encontrar a publicação. A conferência é sempre feita na
 página oficial (periódico, editora ou repositório).
 
+Acesso automatizado: OpenAlex, Crossref e Semantic Scholar têm API aberta e costumam
+funcionar; o Google Acadêmico bloqueia acesso automatizado com frequência, e o Portal
+CAPES depende do login institucional do usuário. Se aparecer CAPTCHA ou login, não
+tente contornar: passe para outra base ou peça ao usuário. Para achar versão gratuita e
+legal de um artigo, use o link de acesso aberto do OpenAlex ou o Unpaywall.
+
 ## Brasil
 
 - SciELO Brasil: periódicos brasileiros com revisão por pares, acesso aberto.
@@ -44,7 +50,8 @@ Aceite com mais segurança quando a fonte:
 - passou por revisão por pares;
 - está indexada em Scopus, Web of Science, SciELO ou DOAJ;
 - foi publicada por editora ou instituição reconhecida;
-- não foi retratada (checar a página do próprio periódico e a Retraction Watch Database).
+- não foi retratada (checar a página do próprio periódico e o registro do DOI no
+  Crossref, que inclui os dados do Retraction Watch).
 
 Desconfie de periódicos predatórios: escopo amplíssimo, revisão concluída em poucos dias,
 convites por e-mail, cobrança agressiva de taxa, corpo editorial sem vínculo verificável.

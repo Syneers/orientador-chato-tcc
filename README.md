@@ -24,6 +24,10 @@ O nome vem do orientador que pede a página de cada citação e devolve o capít
 6. Corrige o que os revisores apontaram e entrega o texto com referências, tabela de
    verificação e lista de pendências.
 
+Pedidos menores rodam só parte do fluxo: "ache referências sobre X" para depois da
+verificação e entrega a lista conferida; "confira esta citação" usa só o verificador de
+fontes.
+
 ## Estrutura
 
 ```
